@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/margin_small"
+    android:background="@color/colorText">
+
+    <com.simplify.ink.InkView
+        android:id="@+id/ink"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/view_button"
+        app:inkFlags="interpolation|responsiveWeight" />
+
+    <View
+        android:id="@+id/view_button"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_above="@+id/linearLayout_button"
+        android:background="@color/colorPrimary" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout_button"
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorText"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_save"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="บันทึก"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_edit"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="แก้ไข"
+            android:textColor="@color/colorRed"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</RelativeLayout>

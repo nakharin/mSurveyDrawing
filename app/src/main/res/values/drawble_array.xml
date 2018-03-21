@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer-array name="vehicles">
+        <item>@drawable/car_sedan_horizontal</item>
+        <item>@drawable/car_pickup_horizontal</item>
+        <item>@drawable/car_van_horizontal</item>
+        <item>@drawable/car_truck_horizontal</item>
+        <item>@drawable/motorcycle_horizontal</item>
+        <item>@drawable/bike</item>
+    </integer-array>
+
+    <integer-array name="objects">
+        <item>@drawable/sticker2</item>
+        <item>@drawable/sticker_k1</item>
+        <item>@drawable/sticker_k2</item>
+        <item>@drawable/sticker_k3</item>
+        <item>@drawable/sticker_k4</item>
+        <item>@drawable/sticker_k5</item>
+        <item>@drawable/sticker_k6</item>
+        <item>@drawable/sticker_k7</item>
+        <item>@drawable/box</item>
+        <item>@drawable/tree</item>
+        <item>@drawable/traffic_signs</item>
+        <item>@drawable/arrow</item>
+        <item>@drawable/electricity_post_1</item>
+        <item>@drawable/electricity_post_2</item>
+        <item>@drawable/electricity_post_3</item>
+        <item>@drawable/electrical_power_transformer</item>
+        <item>@drawable/electrical_power_transformer_2</item>
+        <item>@drawable/fence</item>
+        <item>@drawable/man</item>
+    </integer-array>
+
+    <integer-array name="road_small">
+        <item>@drawable/road_01s</item>
+        <item>@drawable/road_02s</item>
+        <item>@drawable/road_03s</item>
+        <item>@drawable/road_04s</item>
+        <item>@drawable/road_05s</item>
+        <item>@drawable/road_06s</item>
+        <item>@drawable/road_07s</item>
+        <item>@drawable/road_08s</item>
+        <item>@drawable/road_09s</item>
+        <item>@drawable/road_10s</item>
+        <item>@drawable/road_11s</item>
+        <item>@drawable/road_12s</item>
+        <item>@drawable/road_13s</item>
+        <item>@drawable/road_14s</item>
+        <item>@drawable/road_15s</item>
+    </integer-array>
+
+    <integer-array name="road_large">
+        <item>@drawable/road_01</item>
+        <item>@drawable/road_02</item>
+        <item>@drawable/road_03</item>
+        <item>@drawable/road_04</item>
+        <item>@drawable/road_05</item>
+        <item>@drawable/road_06</item>
+        <item>@drawable/road_07</item>
+        <item>@drawable/road_08</item>
+        <item>@drawable/road_09</item>
+        <item>@drawable/road_10</item>
+        <item>@drawable/road_11</item>
+        <item>@drawable/road_12</item>
+        <item>@drawable/road_13</item>
+        <item>@drawable/road_14</item>
+        <item>@drawable/road_15</item>
+    </integer-array>
+
+</resources>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.emcsthai.msurvey.drawing.MainActivity">
+
+    <RelativeLayout
+        xmlns:fab="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/id_activity_scenario"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:padding="@dimen/padding_medium"
+                android:text="โปรดวาดภาพลักษณะการเกิดเหตุ"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/text_medium"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/ll_footer"
+            android:layout_below="@+id/ll_header"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin_small"
+                android:background="@drawable/style_edittext_normal"
+                android:padding="@dimen/padding_small">
+
+                <FrameLayout
+                    android:id="@+id/frame_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorWhite"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY"
+                    android:measureAllChildren="true" />
+
+                <com.github.clans.fab.FloatingActionMenu
+                    android:id="@+id/fab_menu_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|right"
+                    fab:menu_colorNormal="@color/colorAccent"
+                    fab:menu_colorPressed="@color/colorPrimary"
+                    fab:menu_colorRipple="@color/colorPrimaryDark"
+                    fab:menu_shadowColor="#444">
+
+                    <com.github.clans.fab.FloatingActionButton
+                        android:id="@+id/fab_road"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_road_white"
+                        fab:fab_colorNormal="#2196F3"
+                        fab:fab_colorPressed="#0D47A1"
+                        fab:fab_label="ภาพถนน"
+                        fab:fab_size="mini" />
+
+                    <com.github.clans.fab.FloatingActionButton
+                        android:id="@+id/fab_draw"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_pencil_white"
+                        fab:fab_colorNormal="#4CAF50"
+                        fab:fab_colorPressed="#1B5E20"
+                        fab:fab_label="ภาพวาดเอง"
+                        fab:fab_size="mini" />
+
+                    <com.github.clans.fab.FloatingActionButton
+                        android:id="@+id/fab_object"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_box_white"
+                        fab:fab_colorNormal="#795548"
+                        fab:fab_colorPressed="#3E2723"
+                        fab:fab_label="สิ่งของ/วัตถุ"
+                        fab:fab_size="mini" />
+
+                    <com.github.clans.fab.FloatingActionButton
+                        android:id="@+id/fab_vehicle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_car_white"
+                        fab:fab_colorNormal="#FFEB3B"
+                        fab:fab_colorPressed="#FFD600"
+                        fab:fab_label="พาหนะ"
+                        fab:fab_size="mini" />
+
+                </com.github.clans.fab.FloatingActionMenu>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/view_button"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/colorPrimary" />
+
+            <LinearLayout
+                style="?android:attr/buttonBarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorText"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_remove"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="ลบ"
+                    android:textColor="@color/colorOrange"
+                    android:textSize="@dimen/text_small"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btn_clear"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="ล้าง"
+                    android:textColor="@color/colorRed"
+                    android:textSize="@dimen/text_small"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btn_save"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="บันทึก"
+                    android:textColor="@color/colorGreen"
+                    android:textSize="@dimen/text_small"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
