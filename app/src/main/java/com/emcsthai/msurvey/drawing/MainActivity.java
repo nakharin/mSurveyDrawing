@@ -10,12 +10,11 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -26,6 +25,9 @@ import android.widget.ImageView;
 
 import com.github.clans.fab.FloatingActionButton;
 import com.github.clans.fab.FloatingActionMenu;
+
+import net.hockeyapp.android.CrashManager;
+import net.hockeyapp.android.UpdateManager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -82,18 +84,43 @@ public class MainActivity extends AppCompatActivity {
         btn_remove.setOnClickListener(onClickListener);
         btn_clear.setOnClickListener(onClickListener);
         btn_save.setOnClickListener(onClickListener);
+
+        // Method from this class
+        checkForUpdates();
+    }
+
+    private void checkForUpdates() {
+        // Remove this for store builds!
+        UpdateManager.register(this);
+    }
+
+    private void checkForCrashes() {
+        CrashManager.register(this);
+    }
+
+    private void unregisterManagers() {
+        UpdateManager.unregister();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
         photoSorter.loadImages();
+        // Method from this class
+        checkForCrashes();
     }
 
     @Override
     protected void onPause() {
         super.onPause();
         photoSorter.unloadImages();
+        unregisterManagers();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        unregisterManagers();
     }
 
     private void initWidgets() {
